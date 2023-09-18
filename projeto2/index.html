@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/projeto2/style.css" />
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <p>Coloque suas irformações</p>
+    <form method="post" action='#'>
+      <fieldset>
+        <label for="first-name">Coloque seu primeiro nome: <input placeholder="Nome" id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Coloque seu sobrenome: <input placeholder="Sobrenome" id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Coloque seu email: <input placeholder="Email" id="email" name="email" type="email" required /></label>
+        <label for="new-password">Coloque sua senha: <input placeholder="No minimo 8 digitos" id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}"  /></label>
+      </fieldset>
+      
+      <fieldset>
+        <label for="picture">Aqui voce pode carregar um arquivo seu<input id="picture" type="file" name="file" /></label>
+        <label for="age"> Qual sua idade<input placeholder="ex: 21" id="age" type= "number" name="age" min="13" max="120" /></label>
+        <label for="referrer"> Qual é sua rotina:
+          <select id="referrer" name="referrer">
+            <option value="">trabalho/estudo</option>
+            <option value="1">trabalho/estudo/faço exercicios</option>
+            <option value="2">Apenas trabalho</option>
+            <option value="3">Apenas estudo</option>
+            <option value="5">Apenas exercicios</option>
+            <option value="4">Outros</option>
+          </select>
+
+       
+        
+        <label for="bio">Me fale um pouco sobre você e o que achou deste Formulario:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="ex:Eu sou joão gabriel e gosto de..."></textarea>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <p>como voce avalia esse site</p>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" /> Perfeito</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Bom</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Ruim</label>
+        
+          Link para meu <a href="#">portfolio</a>
+       
+      </fieldset>
+      <input type="submit" value="Submit">
+    <a href="http://127.0.0.1:5500/portfolio/index.html#welcome-intro"></a></input>
+    </form>
+    
+  </body>
+</html>
