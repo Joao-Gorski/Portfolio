@@ -64,6 +64,33 @@ nav > ul > li {
   background-color: #343a40;
 }
 
+.welcome > h1 {
+  display: inline-block;
+  border-right: 2px solid #000;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(20, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+}
+
 h1 {
   font-size: 4rem;
   color: #ffffff;
@@ -104,7 +131,7 @@ h2 {
 }
 
 .formulario:hover {
-  transform:translateY(1rem);
+  transform: translateY(1rem);
 }
 
 .project-formulario {
