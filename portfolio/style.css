@@ -6,63 +6,96 @@ body {
 }
 
 main {
-  margin: auto ;
+  margin: auto;
   min-width: 300px;
   max-width: 1600px;
   
 }
-header {
-  text-align: center;
-  z-index: 1;
-  position: fixed;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-  background-color: #adb5bd;
-  display: flex;
-  margin: auto;
- 
+
+#menu {
+  z-index: 2;
 }
-menu{
+
+#menu-bar {
+  width: 45px;
+  height: 40px;
+  margin: 30px 0 20px 20px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: #ffffff;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.nav {
+  transition: 0.3s ease;
   display: none;
-  
-
 }
 
-ul li{
-  width: 100%;
-  flex-direction: row;
-justify-content: center;
-align-items: center;
+.nav ul {
+  padding: 0 22px;
 }
 
-li > a {
-  
-  font-size: 1.7rem;
-  color: rgb(255, 255, 255);
+.nav li {
+  list-style: none;
+  padding: 12px 0;
 }
 
-a {
+.nav li a {
+  color: white;
+  font-size: 30px;
   text-decoration: none;
 }
 
-nav {
-  width: 30%;
-  max-width: 850px;
-  height: 50px;
+.nav li a:hover {
+  font-weight: bold;
 }
 
-nav li{
-
-  list-style: none;
+.menu-bg,
+#menu {
+  top: 0;
+  left: 0;
+  position: fixed;
 }
 
-nav li:hover {
-  background-color: gray;
+.change {
+  display: block;
 }
 
+.change .bar {
+  background-color: white;
+}
 
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+
+.change-bg {
+  width: 520px;
+  height: 460px;
+  transform: translate(-60%, -30%);
+}
 
 .welcome {
   display: flex;
@@ -72,7 +105,7 @@ nav li:hover {
   line-height: 50px;
   align-items: center;
   justify-content: center;
-  background-color: #343a40;
+  background-color: #000000;
 }
 
 .welcome > h1 {
@@ -83,30 +116,31 @@ nav li:hover {
   overflow: hidden;
   animation: typing 2s steps(20, end), blink-caret 0.5s step-end infinite;
   font-size: 2.5rem;
-  }
+}
 
-  @media (max-width:800px) {
-    .welcome > h1 {white-space: wrap;
-      animation: none;
-    }
+@media (max-width: 800px) {
+  .welcome > h1 {
+    white-space: wrap;
+    animation: none;
   }
-  @keyframes typing {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 50%;
-    }
+}
+@keyframes typing {
+  from {
+    width: 0;
   }
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    100% {
-      border-color: #000;
-    }
+  to {
+    width: 30rem;
   }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #000;
+  }
+}
 
 h1 {
   font-size: 4rem;
@@ -124,12 +158,15 @@ h1 {
   font-style: italic;
 }
 
-
 .project {
   background-color: #1e6091;
   margin: 0;
   text-align: center;
   padding: 5rem 2rem;
+}
+
+a{
+  text-decoration: none;
 }
 
 .project > h1 {
@@ -139,7 +176,7 @@ h1 {
 h2 {
   color: #000000;
   text-align: center;
-  font-size: 2rem
+  font-size: 2rem;
 }
 
 .formulario {
@@ -171,7 +208,7 @@ h2 {
 }
 
 #contact {
-  background-color: #212529;
+  background-color: #607488;
   height: 100vh;
   padding: 1rem 2rem;
   display: flex;
@@ -193,7 +230,7 @@ h2 {
 #contact .social-media {
   display: inline-block;
   padding: 10px 60px;
-  background-color: #2b363b;
+  background-color: #3e525c;
   color: #fff;
   text-decoration: none;
   border-radius: 10px;
@@ -202,7 +239,7 @@ h2 {
 }
 
 #contact a:hover {
-  background-color: #184e77;
+  background-color: #24445c;
   transform: translateY(20px);
 }
 .loading {
@@ -229,17 +266,3 @@ h2 {
 }
 
 
-i#burguer {
-  background-color: transparent;
-  display: block;
-  text-align: center;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  
-}
-
-i#burguer:hover{
-  background-color: #747070;
-  color: #343a40;
-}

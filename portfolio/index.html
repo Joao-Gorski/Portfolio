@@ -15,14 +15,15 @@
 <!-- logo -->
 <main>
 <header>
-    
-    <h2>Gorski</h2>
-<nav class="nav" id="navtext">
-    <i id="burguer"  class="material-symbols-outlined" onclick="clickMenu()">
-        menu
-        </i>
-   <Menu id="itens">
-    <ul >
+    <h2</2>
+   <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+     <nav class="nav" id="nav">
+      <ul >
         <li>
             <a href="#welcome-intro">Menu</a>
         </li>
@@ -32,19 +33,17 @@
         <li>
             <a href="#contact">Contato</a>
         </li>
-    </ul>
-   </Menu>    
-</nav>
+      </ul>
+     </nav>
+    </div>
 </header>
 
 <!--titulo-->
 
 <section class="welcome" id="welcome-intro">
-    <h1 > Oi, eu sou João Gabriel Gorski Cesar</h1>
-     <p> Desenvolvedor de sowftare </p>
-     <p>   Apaixonado pela programação </p>
-   
-    
+    <h1 > Oi, eu sou João Gabriel Gorski</h1>
+     <p> Desenvolvedor de software </p>
+     <p> Apaixonado pela programação</p>
 </section>
 </main>
 
@@ -74,7 +73,7 @@
 <!--final-->
 <section  id="contact">
     <h1 >Entre em contato</h1>
-    <p class="redes">Aqui esta algumas das minhas redes </p>
+    <p class="redes">Aqui estão algumas das minhas redes </p>
 
     <div class="social-medias">
         <a  class="social-media"  href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-gorski-cesar-a3b1bb230/" target="_blank">
@@ -88,13 +87,10 @@
 </section>
 
     <script>
-        function clickMenu(){
-    if (itens.style.display == 'block'){
-        itens.style.display =  'none'
-    } else {
-        itens.style.display = 'block'
-    }
-
+       function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
 }
     </script>
 </body>
