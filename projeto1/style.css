@@ -1,245 +1,245 @@
 body {
-    background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.montanha {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
+  position: absolute;
+  transform: skew(0deg, 44deg);
+  z-index: 2;
+  margin-top: 100px;
+}
+.back-moutain {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
+  z-index: 1;
+  transform: rotate(45deg);
+  left: 110px;
+  top: 225;
+}
+.sol {
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+}
+
+.ping {
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0ms;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-top: 75px;
+  z-index: 4;
+  position: relative;
+}
+
+.ping-head {
+  top: 10%;
+  left: 25%;
+  z-index: 1;
+  border-radius: 70% 70% 65% 65%;
+  width: 50%;
+  height: 45%;
+  background: linear-gradient(45deg, var(--ping-asa), rgb(239, 240, 228));
+}
+.ping-back {
+  top: 40%;
+  left: 23.5%;
+  border-radius: 70% 70% 65% 65%;
+  width: 53%;
+  height: 45%;
+  background: linear-gradient(
+    45deg,
+    rgb(134, 133, 133) 0%,
+    rgb(134, 133, 133) 25%,
+    white 67%
+  );
+}
+
+.ping * {
+  position: absolute;
+}
+.ground {
+  height: calc(100vh 300px);
+  width: 100vw;
+  height: 400px;
+  background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+  z-index: 3;
+  position: absolute;
+  margin-top: -58px;
+}
+
+.ping-back::before {
+  opacity: 70%;
+  border-radius: 0% 0% 100% 100%;
+  top: 10%;
+  left: 25%;
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 45%;
+  background-color: var(--ping-asa);
+}
+
+.face {
+  top: 15%;
+  width: 60%;
+  height: 70%;
+  border-radius: 70% 70% 60% 60%;
+  background-color: var(--ping-face);
+}
+
+.face.left {
+  left: 5%;
+}
+.face.right {
+  right: 5%;
+}
+:root {
+  --ping-perna: orange;
+  --ping-face: white;
+  --ping-asa: gray;
+}
+.eye {
+  width: 15%;
+  height: 17%;
+  background-color: black;
+  top: 45%;
+  border-radius: 50%;
+}
+
+.eye.left {
+  left: 25%;
+}
+
+.eye.right {
+  right: 25%;
+}
+
+.limp {
+  width: 90%;
+  height: 70%;
+  background-color: var(--ping-face);
+  border-radius: 70% 70% 100% 100%;
+  top: 25%;
+  left: 5%;
+  border-bottom: 100%;
+}
+
+.blush {
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: pink;
+  top: 60%;
+}
+
+.blush.left {
+  left: 15%;
+}
+
+.blush.right {
+  right: 15%;
+}
+
+.eye-lid {
+  border-radius: 50%;
+  top: 25%;
+  left: -25%;
+  width: 150%;
+  height: 100%;
+  background-color: var(--ping-face);
+}
+
+.nariz {
+  height: 10%;
+  background-color: var(--ping-perna);
+  border-radius: 50%;
+}
+
+.nariz.top {
+  width: 20%;
+  top: 60%;
+  left: 40%;
+}
+
+.nariz.bottom {
+  width: 16%;
+  top: 65%;
+  left: 42%;
+}
+.perna {
+  width: 15%;
+  z-index: -1;
+  height: 30%;
+  top: 85%;
+  border-radius: 50%;
+  background-color: var(--ping-perna);
+}
+.perna.left {
+  transform: rotate(80deg);
+  left: 25%;
+}
+.perna.right {
+  transform: rotate(-80deg);
+  right: 25%;
+}
+
+.asa {
+  z-index: -1;
+  border-radius: 30% 30% 30% 120%;
+  width: 30%;
+  height: 60%;
+  background: linear-gradient(90deg, var(--ping-asa), rgba(248, 8, 8, 0.11));
+}
+
+.asa.left {
+  transform-origin: top left;
+  transform: rotate(130deg) scaleX(-1);
+  top: 35%;
+  left: 5%;
+  animation-name: wave;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.ping:active {
+  transform: scale(1.5);
+  cursor: not-allowed;
+}
+
+.asa.right {
+  transform: rotate(-45deg);
+  top: 0%;
+  right: -5%;
+}
+@keyframes wave {
+  10% {
+    transform: rotate(110deg) scaleX(-1);
   }
-  
-  .montanha {
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
-    position: absolute;
-    transform: skew(0deg, 44deg);
-    z-index: 2;
-    margin-top: 100px;
-  }
-  .back-moutain {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
-    z-index: 1;
-    transform: rotate(45deg);
-    left: 110px;
-    top: 225;
-  }
-  .sol {
-    top: -75px;
-    right: -75px;
-    border-radius: 50%;
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-color: yellow;
-  }
-  
-  .ping {
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0ms;
-    width: 300px;
-    height: 300px;
-    margin: auto;
-    margin-top: 75px;
-    z-index: 4;
-    position: relative;
-  }
-  
-  .ping-head {
-    top: 10%;
-    left: 25%;
-    z-index: 1;
-    border-radius: 70% 70% 65% 65%;
-    width: 50%;
-    height: 45%;
-    background: linear-gradient(45deg, var(--ping-asa), rgb(239, 240, 228));
-  }
-  .ping-back {
-    top: 40%;
-    left: 23.5%;
-    border-radius: 70% 70% 65% 65%;
-    width: 53%;
-    height: 45%;
-    background: linear-gradient(
-      45deg,
-      rgb(134, 133, 133) 0%,
-      rgb(134, 133, 133) 25%,
-      white 67%
-    );
-  }
-  
-  .ping * {
-    position: absolute;
-  }
-  .ground {
-    height: calc(100vh 300px);
-    width: 100vw;
-    height: 400px;
-    background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
-    z-index: 3;
-    position: absolute;
-    margin-top: -58px;
-  }
-  
-  .ping-back::before {
-    opacity: 70%;
-    border-radius: 0% 0% 100% 100%;
-    top: 10%;
-    left: 25%;
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 45%;
-    background-color: var(--ping-asa);
-  }
-  
-  .face {
-    top: 15%;
-    width: 60%;
-    height: 70%;
-    border-radius: 70% 70% 60% 60%;
-    background-color: var(--ping-face);
-  }
-  
-  .face.left {
-    left: 5%;
-  }
-  .face.right {
-    right: 5%;
-  }
-  :root {
-    --ping-perna: orange;
-    --ping-face: white;
-    --ping-asa: gray;
-  }
-  .eye {
-    width: 15%;
-    height: 17%;
-    background-color: black;
-    top: 45%;
-    border-radius: 50%;
-  }
-  
-  .eye.left {
-    left: 25%;
-  }
-  
-  .eye.right {
-    right: 25%;
-  }
-  
-  .limp {
-    width: 90%;
-    height: 70%;
-    background-color: var(--ping-face);
-    border-radius: 70% 70% 100% 100%;
-    top: 25%;
-    left: 5%;
-    border-bottom: 100%;
-  }
-  
-  .blush {
-    width: 15%;
-    height: 10%;
-    border-radius: 50%;
-    background-color: pink;
-    top: 60%;
-  }
-  
-  .blush.left {
-    left: 15%;
-  }
-  
-  .blush.right {
-    right: 15%;
-  }
-  
-  .eye-lid {
-    border-radius: 50%;
-    top: 25%;
-    left: -25%;
-    width: 150%;
-    height: 100%;
-    background-color: var(--ping-face);
-  }
-  
-  .nariz {
-    height: 10%;
-    background-color: var(--ping-perna);
-    border-radius: 50%;
-  }
-  
-  .nariz.top {
-    width: 20%;
-    top: 60%;
-    left: 40%;
-  }
-  
-  .nariz.bottom {
-    width: 16%;
-    top: 65%;
-    left: 42%;
-  }
-  .perna {
-    width: 15%;
-    z-index: -1;
-    height: 30%;
-    top: 85%;
-    border-radius: 50%;
-    background-color: var(--ping-perna);
-  }
-  .perna.left {
-    transform: rotate(80deg);
-    left: 25%;
-  }
-  .perna.right {
-    transform: rotate(-80deg);
-    right: 25%;
-  }
-  
-  .asa {
-    z-index: -1;
-    border-radius: 30% 30% 30% 120%;
-    width: 30%;
-    height: 60%;
-    background: linear-gradient(90deg, var(--ping-asa), rgba(248, 8, 8, 0.11));
-  }
-  
-  .asa.left {
-    transform-origin: top left;
+  20% {
     transform: rotate(130deg) scaleX(-1);
-    top: 35%;
-    left: 5%;
-    animation-name: wave;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
   }
-  
-  .ping:active {
-    transform: scale(1.5);
-    cursor: not-allowed;
+  30% {
+    transform: rotate(110deg) scaleX(-1);
   }
-  
-  .asa.right {
-    transform: rotate(-45deg);
-    top: 0%;
-    right: -5%;
+  40% {
+    transform: rotate(130deg) scaleX(-1);
   }
-  @keyframes wave {
-    10% {
-      transform: rotate(110deg) scaleX(-1);
-    }
-    20% {
-      transform: rotate(130deg) scaleX(-1);
-    }
-    30% {
-      transform: rotate(110deg) scaleX(-1);
-    }
-    40% {
-      transform: rotate(130deg) scaleX(-1);
-    }
-  }
+}
