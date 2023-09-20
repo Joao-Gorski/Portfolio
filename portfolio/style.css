@@ -6,13 +6,14 @@ body {
 }
 
 main {
-  margin: auto;
-  min-width: 120px;
+  margin: auto ;
+  min-width: 300px;
   max-width: 1600px;
+  
 }
-
-
 header {
+  text-align: center;
+  z-index: 1;
   position: fixed;
   justify-content: space-between;
   align-items: center;
@@ -20,45 +21,48 @@ header {
   height: 100px;
   background-color: #adb5bd;
   display: flex;
+  margin: auto;
+ 
+}
+menu{
+  display: none;
+  
+
+}
+
+ul li{
+  width: 100%;
+  flex-direction: row;
+justify-content: center;
+align-items: center;
 }
 
 li > a {
+  
   font-size: 1.7rem;
   color: rgb(255, 255, 255);
 }
 
 a {
-  color: #012a4a;
   text-decoration: none;
 }
 
 nav {
-  width: 50%;
-  max-width: 450px;
+  width: 30%;
+  max-width: 850px;
   height: 50px;
 }
 
+nav li{
+
+  list-style: none;
+}
+
 nav li:hover {
-  background-color: #343a40;
-  cursor: pointer;
+  background-color: gray;
 }
 
-nav > ul {
-  flex-wrap: wrap;
-  align-items: center;
-  padding-inline-start: 0;
-  margin-block: 0;
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
 
-nav > ul > li {
-  color: #dfdfe2;
-  margin: 0 0.2rem;
-  padding: 0.2rem;
-  display: block;
-}
 
 .welcome {
   display: flex;
@@ -72,34 +76,37 @@ nav > ul > li {
 }
 
 .welcome > h1 {
-  display: inline-block;
-  border-right: 2px solid #000;
+  text-align: center;
+  display: flex;
+  border-right: 1px solid #000;
   white-space: nowrap;
   overflow: hidden;
   animation: typing 2s steps(20, end), blink-caret 0.5s step-end infinite;
-  font-size: 3rem;
-}
-
-
-
-@keyframes typing {
-  0% {
-    width: 0;
+  font-size: 2.5rem;
   }
-  50% {
-    width: 50%;
-  }
-}
 
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
+  @media (max-width:800px) {
+    .welcome > h1 {white-space: wrap;
+      animation: none;
+    }
   }
-  100% {
-    border-color: #000;
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 50%;
+    }
   }
-}
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    100% {
+      border-color: #000;
+    }
+  }
 
 h1 {
   font-size: 4rem;
@@ -109,12 +116,14 @@ h1 {
 }
 
 .welcome > p {
+  text-align: center;
   margin-top: 1px;
   font-size: 2rem;
   color: #ffffff;
   font-weight: 100;
   font-style: italic;
 }
+
 
 .project {
   background-color: #1e6091;
@@ -128,10 +137,9 @@ h1 {
 }
 
 h2 {
-  color: #f0f0f0;
-  margin: 0.02rem;
+  color: #000000;
   text-align: center;
-  font-size: min(2vw, 10.2rem);
+  font-size: 2rem
 }
 
 .formulario {
@@ -221,3 +229,17 @@ h2 {
 }
 
 
+i#burguer {
+  background-color: transparent;
+  display: block;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  
+}
+
+i#burguer:hover{
+  background-color: #747070;
+  color: #343a40;
+}
